@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@keyframes effect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gridPanel {
+  width: 480px;
+  height: 560px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #bbada0;
+  border-radius: 10px;
+}
+.grid,
+.cell {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+/* 背景单元格 */
+.grid {
+  background-color: #ccc0b3;
+  /* 前景格压着背景格，需做浮动 */
+  float: left;
+  margin: 16px 0 0 16px;
+}
+/* 前景单元格 */
+.cell {
+  /* 前景格使用绝对定位覆盖到背景格 */
+  position: absolute;
+  text-align: center;
+  line-height: 100px;
+  font-size: 60px;
+  /* 除2，4之外数字均为白色 */
+  color: #ffffff;
+  animation: effect 0.5s;
+  transition: background-color 0.3s;
+}
+
+#c00,
+#c01,
+#c02,
+#c03 {
+  top: 16px;
+}
+#c10,
+#c11,
+#c12,
+#c13 {
+  top: 132px;
+}
+#c20,
+#c21,
+#c22,
+#c23 {
+  top: 248px;
+}
+#c30,
+#c31,
+#c32,
+#c33 {
+  top: 364px;
+}
+
+#c00,
+#c10,
+#c20,
+#c30 {
+  left: 16px;
+}
+#c01,
+#c11,
+#c21,
+#c31 {
+  left: 132px;
+}
+#c02,
+#c12,
+#c22,
+#c32 {
+  left: 248px;
+}
+#c03,
+#c13,
+#c23,
+#c33 {
+  left: 364px;
+}
+/* 数字的样式 */
+.n2 {
+  background-color: #eee3da;
+}
+.n4 {
+  background-color: #ede0c8;
+}
+.n8 {
+  background-color: #f2b179;
+}
+.n16 {
+  background-color: #f59563;
+}
+.n32 {
+  background-color: #f67c5f;
+}
+.n64 {
+  background-color: #f65e3d;
+}
+.n128 {
+  background-color: #edcf72;
+}
+.n256 {
+  background-color: #edcc61;
+}
+.n512 {
+  background-color: #9c0;
+}
+.n1024 {
+  background-color: #33b5e5;
+}
+.n2048 {
+  background-color: #09c;
+}
+.n4096 {
+  background-color: #a6c;
+}
+.n8192 {
+  background-color: #93c;
+}
+.n2,
+.n4 {
+  color: #776e65;
+}
+.n1024,
+.n2048,
+.n4096,
+.n8192 {
+  font-size: 40px;
+}
+
+.result {
+  width: 480px;
+  float: left;
+  text-align: center;
+}
+
+.result > span {
+  width: 100px;
+  height: 50px;
+  display: inline-block;
+  line-height: 50px;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bolder;
+  border-radius: 10px;
+  background-color: #ccc0b3;
+}
+
+.result .text {
+  width: 150px;
+}
+
+.result .resetBtn {
+  cursor: pointer;
+}
